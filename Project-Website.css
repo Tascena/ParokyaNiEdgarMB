@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body, html {
+    font-family: 'Varela Round', sans-serif; 
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+/*Header*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+header nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+    width: 100%; 
+    background-color: transparent; 
+}
+header nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+header nav a:hover {
+    color: #ffffff; 
+    transform: scale(1.1); 
+}
+.Close-sidebar{
+    margin-right: auto;
+    color: whitesmoke;
+}
+header nav svg{
+    fill: white;
+}
+#Sidebar{
+    display: none;
+}
+.Open-sidebar{
+    margin-left: auto;
+    display: none;
+}
+.Close-sidebar{
+    display: none;
+}
+@media(max-width: 425px){
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 280px;
+        box-shadow: -5px 0 5px rgb(110, 110, 110);
+        transition: 0.85s ease-out;
+        background-color: black; 
+    }
+    header {
+        backdrop-filter: none; 
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0px; 
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .Open-sidebar, .Close-sidebar{
+        padding: 20px;
+        display: block;
+    }
+    #Sidebar:checked ~ .links-container{
+        right: 0;
+    }
+    #Sidebar:checked ~ #Overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    .album-item {
+        align-self: center;
+    }
+}
+h1, h2, h3, h4 {
+    text-align: center;
+    font-family: 'Varela Round', sans-serif; 
+}
+
+
+/*Homes*/
+.Title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    word-spacing: 15px;
+    text-shadow: 3px 3px 5px #333 ;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    margin: 0 auto; 
+    position: absolute; 
+    top: 100px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 10; 
+}
+.Edgar {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+}
+.Homes {
+    background-image: url("ROCK_ALT_COVER_PAROKYANIEDGAR.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin-top: 70px;
+    margin-bottom: -70px;
+}
+#Home {
+    padding-top: 90px;
+    margin-top: -80px;
+}
+
+
+.Explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border-color: #ffffff;
+    border-width: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    bottom: -200px;
+    position: relative;
+}
+.Explore-button:hover {
+    transform: scale(1.1); 
+}
+
+
+/*About*/
+.iabout {
+    font-family: 'Varela Round', sans-serif; 
+    text-align: center;
+    margin-top: -20px;
+    padding-bottom: 200px;
+    padding-top: 100px;
+    font-size: 20px;
+    position: relative;
+    z-index: 1; 
+    color: white;
+}
+#About {
+    position: relative;
+    overflow: hidden;
+    font-family: 'Varela Round', sans-serif; 
+}
+.Abouts {
+    padding-bottom: 110px;
+    font-family: 'Varela Round', sans-serif; 
+}
+.Abouts h1 {
+    padding-top: 80px;
+    font-size: 2.5em;
+    font-family: 'Varela Round', sans-serif; 
+}
+#About::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.discovermnl.com.ph/wp-content/uploads/2022/11/Screen-Shot-2022-11-28-at-10.51.25-PM-1000x650.png") no-repeat center center/cover, url('Abouts.png') no-repeat center center/cover;
+    filter: blur(10px); 
+    z-index: -1;
+}
+
+
+/*Musics*/
+.Musics {
+    position: relative; 
+    background: url("Fusion_Parokya_ni_Edgar.jpg") no-repeat center center/cover, 
+                url('Abouts.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+    z-index: 1; 
+    font-family: 'Varela Round', sans-serif; 
+    
+}
+
+.Musics::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
+}
+
+.Musics h1 {
+    padding-top: 80px;
+    font-size: 2.5em;
+    font-family: 'Varela Round', sans-serif; 
+}
+.Musics h2 {
+    font-family: 'Varela Round', sans-serif; 
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #ffffff; 
+}
+.row {
+    display: flex;
+    text-align: center ;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+.album {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.album:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.5);
+}
+.column {
+    flex: 1 1 200px;
+    max-width: 200px;
+    text-align: center;
+    padding: 5px;
+}
+.column p {
+    font-family: Verdana, sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.greatest{
+    text-align: center;
+}
+
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+    margin-left: 70px;
+}
+
+.album-item {
+    flex: 0 0 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-item img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.album-item:hover {
+    transform: scale(0.95);  
+}
+
+.album-item p {
+    margin-top: 10px;
+    font-family: Verdana, sans-serif;
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+/* Slider Arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+
+/*Members*/
+.Members {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #000000;
+    font-family: Verdana, sans-serif;
+}
+.Member h1{
+    padding-top: 80px;
+    font-size: 3em;
+    font-family: Verdana, sans-serif;
+}
+.Profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.member-card {
+    background-color: #000000;
+    width: 300px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.member-photo {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 5%; 
+    margin-bottom: 15px;
+    font-family: Verdana, sans-serif;
+}
+.member-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: Verdana, sans-serif;
+}
+.member-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    font-family: Verdana, sans-serif;
+}
+.member-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-family: Verdana, sans-serif;
+}
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+
+/*Contacts Section*/
+#Contact {
+    padding-top: 90px;
+    margin-top: -80px;
+}
+.Contacts {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+.Contacts h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+.contact-description {
+    font-family: Verdana, sans-serif;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #ccc;
+}
+.social-media-section h2,
+.members-contacts h2 {
+    font-family: Verdana, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #ffffff; 
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; 
+}
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 1; 
+}
+.contact-table {
+    width: 100%;
+    margin: auto;
+    background-color: #111;
+    color: #ccc;
+}
+.contact-table th, .contact-table td {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #333; 
+    text-align: center;
+    font-family: Verdana, sans-serif;
+}
+.contact-table th {
+    background-color: #222; 
+    color: #fafafa; 
+    font-family: Verdana, sans-serif;
+}
+.contact-table a {
+    color: #ffffff; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.contact-table a:hover {
+    color: #fff; 
+}
+
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0; 
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1; 
+    transform: translateY(0);
+}
+
+/* Section Divider */
+.section-divider {
+    border: none; 
+    height: 5px; 
+    background: linear-gradient(to right, #000000, #ffffff); 
+    margin: 50px auto; 
+    width: 90%; 
+    border-radius: 100px;
+}
+
+/*Footer*/
+footer {
+    bottom: 0;
+    width: 100%;
+}
+footer nav {
+    background-color: black;
+    justify-content: center;
+    height: 30px;
+}
+.copyright {
+    text-align: center;
+    align-content: center;
+    margin-top: 80px;
+}
+.edgarlink {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.Bars {
+    margin-top: 15px;
+}
+.edgarlink p a:hover {
+    color: #FFD700;
+}
+.edgarlink p {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-top: 40px;
+    padding: 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.edgarlink a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s;
+}

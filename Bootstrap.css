@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+body, html {
+    font-family: Verdana, Tahoma, sans-serif; /* Updated font family */
+    padding: 0;
+    margin: 0;
+    color: whitesmoke;
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+
+/*Header*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px); 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+header nav {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+.links-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    height: 100%;
+    width: 100%; 
+    background-color: transparent; 
+}
+header nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: whitesmoke; 
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+header nav a:hover {
+    color: #ffffff; 
+    transform: scale(1.1); 
+}
+.Close-sidebar{
+    margin-right: auto;
+    color: whitesmoke;
+}
+header nav svg{
+    fill: white;
+}
+#Sidebar{
+    display: none;
+}
+.Open-sidebar{
+    margin-left: auto;
+    display: none;
+}
+.Close-sidebar{
+    display: none;
+}
+@media(max-width: 425px){
+    .links-container{
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 10;
+        width: 280px;
+        box-shadow: -5px 0 5px rgb(110, 110, 110);
+        transition: 0.85s ease-out;
+        background-color: black; 
+    }
+    header {
+        backdrop-filter: none; 
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 0px; 
+    }
+    nav a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1px;
+        margin-bottom: 1px;
+    }
+    .Open-sidebar, .Close-sidebar{
+        padding: 20px;
+        display: block;
+    }
+    #Sidebar:checked ~ .links-container{
+        right: 0;
+    }
+    #Sidebar:checked ~ #Overlay{
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+}
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Verdana, Tahoma, sans-serif; /* Ensure headings and paragraphs use the updated font family */
+    text-align: center;
+    justify-content: center;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+p {
+    color: white;
+}
+
+/*Gallery*/
+.gallery {
+    padding-top: 90px;
+    margin-top: -100px;
+    background-color: black !important; 
+    color: white;
+}
+
+.g-4,
+.gallery-container,
+.gallery .row,
+.gallery .col-md-4 {
+    background-color: black !important; 
+}
+
+.gallery img {
+    display:inline-block;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    background-color: black;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.7);
+}
+
+.gallery img:hover {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
+/* Gallery Heading */
+.gallery h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: white; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .gallery img {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+/*FAQ Section*/
+.FAQ {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 100px;
+    background-color: black;
+    color: white;
+    margin-bottom: 50px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+
+.Faq {
+    text-align: center;
+    background-color: black;
+    justify-content: center;
+    align-content: center;
+    width: 60%; 
+    margin: 0 auto; 
+    padding: 1.5rem; 
+    background-color: #f8f9fa; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+
+.Faq:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.Q {
+    display: block;
+    position: relative;
+    letter-spacing: 1.2px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff; 
+    margin-bottom: 0.5rem;
+}
+
+.Q::after {
+    width: 10px;
+    height: 10px;
+    content: '';
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px 2px 0 0;
+    transform: rotate(135deg);
+    transition: transform 0.4s ease-in-out;
+    margin-left: 10px; 
+}
+
+.A {
+    line-height: 1.6; 
+    letter-spacing: 0.5px;
+    font-size: 18px;
+    color: #ffffff; 
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.faq {
+    display: none;
+    background-color: black;
+}
+
+.faq:checked + .Q + .A {
+    max-height: 300px; 
+}
+
+.faq:checked + .Q::after {
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+/*Merchandise Section*/
+.Merchandise {
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 100px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: -50px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+
+.Merchandise h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.Merchandise h3 {
+    font-size: 24px;
+    color: #ffffff; 
+    margin-bottom: 50px;
+    position: relative;
+}
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.product div {
+    text-align: center;
+    width: 300px; 
+    padding: 20px;
+    border-radius: 12px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product div:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.product-pic {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.product-pic:hover {
+    transform: scale(1.1); 
+    opacity: 0.9;
+}
+
+.product .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 10px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to product details */
+}
+
+.product .price {
+    font-size: 16px;
+    color: #ffffff; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to product details */
+}
+
+.shop-icon {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.Shop-icon {
+    width: auto;
+    height: 30px;
+    margin-top: 30px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; 
+}
+
+.Shop-icon:hover {
+    transform: scale(1.2); 
+    opacity: 1; 
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .product div {
+        width: 100%; 
+    }
+}
+
+/*Music list*/
+.Music-list {
+    position: relative;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 90px;
+    margin-top: -100px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+div.Music-list {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Music-list h1 {
+    font-size: 32px; 
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.Music-list h3 {
+    font-size: 20px; 
+    color: #ffffff; 
+    margin-bottom: 30px; 
+}
+
+.Music-list ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.Music-list ul li {
+    font-size: 16px; 
+    color: #ffffff; 
+    margin: 8px 0; 
+    padding: 8px; 
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Music-list ul li:hover {
+    transform: scale(1.02);
+}
+
+.Music-list a {
+    text-decoration: none;
+    font-size: 16px; 
+    font-weight: bold;
+    color: #ffffff; 
+    margin: 8px; 
+    padding: 8px 16px; 
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Music-list a:hover {
+    color: #ffffff; 
+    background-color: #000000;
+    transform: scale(1.05); 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Music-list ul li {
+        font-size: 14px; 
+        padding: 6px; 
+    }
+
+    .Music-list a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+/*Awards*/
+.Awards {
+    position: relative;
+    padding-top: 80px;
+    margin-bottom: 200px;
+    text-align: center;
+    background-color: black;
+    color: black;
+    margin-bottom: -100px;
+    margin-top: -20px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+
+.Awards h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FFD700; 
+    margin-bottom: 20px;
+}
+
+.Awards h3 {
+    font-size: 24px;
+    color: #f8f9fa; 
+    margin-bottom: 40px;
+}
+
+.Awards h5 {
+    color: #f8f9fa;
+    padding-bottom: 30px;
+}
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; 
+}
+
+.award-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #1a1a1a; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    text-align: center;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15); 
+}
+
+.award-card img {
+    width: 100%; 
+    height: auto;
+    border-radius: 8px; 
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.award-card img:hover {
+    transform: scale(1.1); 
+    opacity: 0.9; 
+}
+
+.award-card p {
+    font-size: 16px;
+    color: #f8f9fa; 
+    margin-bottom: 10px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to award details */
+}
+
+.award-card .award-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFD700; 
+    margin-bottom: 10px;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to award details */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .award-card {
+        width: 100%; 
+    }
+}
+
+/*Footer*/
+footer {
+    top: 0;
+    bottom: 0;
+    padding-top: -90px;
+    margin-top: 100px;
+    width: 100%;
+    background-color: black;
+    color: black;
+    font-family: Verdana, Tahoma, sans-serif; /* Apply font family to specific sections */
+}
+footer nav {
+    background-color: black;
+    color: black;
+    justify-content: center;
+}
+.copyright p {
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+.edgarlink {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.edgarlink p a:hover {
+    color: #FFD700;
+}
+.edgarlink p {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.edgarlink a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s;
+}

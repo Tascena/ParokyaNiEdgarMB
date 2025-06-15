@@ -1,0 +1,311 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parokya ni Edgar</title>
+    <link rel="stylesheet" href="Project-Website.css">
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon" style="width: 100%;">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="Sidebar">
+            <label for="Sidebar" class="Open-sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120zm0-200v-80h720v80H120zm0-200v-80h720v80H120Z"/></svg>
+            </label>
+
+            <label id="Overlay" for="Sidebar"></label>
+            <div class="links-container">
+            <label for="Sidebar" class="Close-sidebar">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <a class="Home-link" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Music">Music</a>
+            <a href="#Member">Members</a>
+            <a href="#Contact">Contact</a>
+            <a href="Bootstrap.html">Others</a>
+
+            </div>
+        </nav>
+    </header>
+    
+    <div id="Home" class="Homes fade-in">
+        <div class="Home-content">
+            <h1 class="Title">PAROKYA NI EDGAR MUSIC BAND</h1>
+            <a href="#Music" class="Explore-button">Explore Music</a>
+        </div>
+    </div>
+
+    <div id="About" class="Abouts fade-in">
+        <h1>ABOUT</h1>
+        <div class="iabout">
+            <p>Parokya ni Edgar is a band from the Philippines formed in 1993 by a group of students from the Ateneo de Manila High School. <br>
+                Parokya ni Edgar is omposed of Chito Miranda (lead vocals), Gab Chee Kee (rhythm guitar, vocals), Buwi Meneses (bass guitar), <br>
+                Darius Semaña (lead guitar), Dindin Moreno (drums, percussion), and Vinci Montaner (backing vocals). <br> 
+                The band is known for their original rock novelty music and often adaptations of songs taken from popular songs both foreign and local. <br>
+                The band is known and remembered for their original rock novelty songs and often humorous album covers. <br>
+                The band uses a variety of styles from one song to another - alternative rock to pop rock, melancholy to rapcore, and so on - <br>
+                while providing a humorous lightheartedness to their listeners. <br>
+                Despite having "Edgar" in the band's name, none of the members go by this.</p>
+        </div>
+    </div>
+
+    <div id="Music" class="Musics fade-in">
+        <h1>MUSIC</h1>
+        <h2 class="greatest">GREATEST HITS</h2>
+        <div class="slider-container">
+            <button class="slider-arrow left-arrow" onclick="moveSlider(-1)">&#10094;</button>
+            <div class="slider">
+                <div class="album-item">
+                    <a href="https://youtu.be/ii0bqHf14Rs?list=OLAK5uy_lBZb0dJH-TE7aY2H2_jfyenyMfDn7AcBE" target="_blank"><img src="https://images.genius.com/2ef9776a2a7859e1b55f80009e9dc524.600x600x1.jpg"  onerror="this.onerror=null;this.src='Halaga.jpg'" alt="Halaga Album" class="album" data-audio="halaga"></a>
+                    <audio id="halaga" src="Halaga.mp3"></audio>
+                    <p>Halaga</p>
+                </div>
+                <div class="album-item">
+                    <a href="https://youtu.be/rbKxoz1ZfiM" target="_blank"><img src="https://images.genius.com/390228b3ddd6f1f3684189d456e9299f.1000x1000x1.jpg"  onerror="this.onerror=null;this.src='Bagsakan.jpg'" alt="Bagsakan Album" class="album" data-audio="bagsakan"></a>
+            <audio id="bagsakan" src="Bagsakan.mp3"></audio>
+                    <p>Bagsakan</p>
+                </div>
+                <div class="album-item">
+                    <a href="https://youtu.be/r-bssM2JkG0" target="_blank"><img src="https://i.scdn.co/image/ab67616d0000b27387b7413135165919334c4577"  onerror="this.onerror=null;this.src='Barkada.jpg'" alt="Barkada Album" class="album" data-audio="barkada"></a>
+            <audio id="barkada" src="Barkada.mp3"></audio>
+                    <p>Barkada</p>
+                </div>
+                <div class="album-item">
+                    <a href="https://youtu.be/V_O5muP1BhQ" target="_blank"><img src="https://i.scdn.co/image/ab67616d0000b273cf7889e587d90d75afebef93" onerror="this.onerror=null;this.src='Alumni Homecoming.jpg'" alt="Alumni Homecoming Album" class="album" data-audio="alumni homecoming"></a>
+                    <audio id="alumni homecoming" src="Alumni Homecoming.mp3"></audio>
+                    <p>Alumni Homecoming</p>
+                </div>
+                <div class="album-item">
+                    <a href="https://youtu.be/mB5W28DVgKs" target="_blank"><img src="https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/49/15/f9/4915f9ad-d1fb-1cf2-235c-38509854b4ce/3610155812709_Cover.jpg/600x600bf-60.jpg" onerror="this.onerror=null;this.src='This Guys In Love With You Pare.jpg'" alt="This Guy's In Love With You Pare Album" class="album" data-audio="this guys in love with you pare"></a>
+                    <audio id="this guys in love with you pare" src="This Guy's In Love With You Pare.mp3"></audio>
+                    <p>This Guy's In Love With You Pare</p>
+                </div>
+                <div class="album-item">
+                    <a href="https://youtu.be/KHfi-Mg_Qv0" target="_blank"><img src="https://i.scdn.co/image/ab67616d0000b273556f267a3547979e820c4144" onerror="this.onerror=null;this.src='Nakaw Ang Wallet Ko.jpg'" alt="Nakaw Ang Wallet Ko Album" class="album" data-audio="nakaw ang wallet ko"></a>
+                    <audio id="nakaw ang wallet ko" src="Nakaw Ang Wallet Ko.mp3"></audio>
+                    <p>Nakaw Ang Wallet Ko</p>
+                </div>
+            </div>
+            <button class="slider-arrow right-arrow" onclick="moveSlider(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <div id="Member" class="Members fade-in">
+        <h1>MEMBERS</h1>
+        <div>
+            <h2 class="PnEMembers">Parokya ni Edgar Members</h2>
+            <div class="Profiles">
+                <div class="member-card">
+                    <img src="https://philnews.ph/wp-content/uploads/2021/12/chito-miranda.jpg" onerror="this.onerror=null;this.src='Chito Miranda.jpg'" class="member-photo" alt="Chito Miranda">
+                    <h3>Chito Miranda</h3>
+                    <p>Chito Miranda, whose full name is Alfonso "Chito" Yanga Miranda Jr., is a Filipino singer, songwriter, and occasional actor born on February 7, 1976, in Manila, Philippines. He is best known as one of the founding members and the lead vocalist of the popular Filipino rock band Parokya ni Edgar.</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Chito_Miranda" target="_blank">Wikipedia</a>.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://alchetron.com/cdn/gab-chee-kee-c1a7f7d0-c306-4b7e-963e-75ec442d1b4-resize-750.jpeg" onerror="this.onerror=null;this.src='Gab Chee Kee.jpeg'" class="member-photo" alt="Gab Chee Kee">
+                    <h3>Gab Chee Kee</h3>
+                    <p>Gab Chee Kee, full name Gabriel Ignatius Juan Chee Kee, is a Filipino guitarist, singer, and songwriter. He is known for composing and singing lead vocals on Parokya ni Edgar's sleeper hit "Your Song (My One and Only You)."</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Gab_Chee_Kee" target="_blank">Wikipedia</a>.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://alchetron.com/cdn/buwi-meneses-21581f8c-a163-4fc5-9a60-32ee7d01a07-resize-750.jpeg" onerror="this.onerror=null;this.src='Buwi Meneses.jpeg'" class="member-photo" alt="Buwi Meneses">
+                    <h3>Buwi Meneses</h3>
+                    <p>Buwi Meneses, full name Buhawi Francia Meneses, is a Filipino bassist best known as a member of the band Parokya ni Edgar. He joined the band with childhood friends, including Chito Miranda.</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Buwi_Meneses" target="_blank">Wikipedia</a>.</p>
+                </div>
+            </div>
+            <div class="Profiles">
+                <div class="member-card">
+                    <img src="https://alchetron.com/cdn/darius-semaa-23cfd6d4-bb1e-48bd-b1d8-083b94b0f7f-resize-750.jpeg" onerror="this.onerror=null;this.src='Darius Semaña.jpeg'" class="member-photo" alt="Darius Semaña">
+                    <h3>Darius Semaña</h3>
+                    <p>Darius Gerard Laluna Semaña is the lead guitarist of the band Parokya ni Edgar. He is known for playing a Fender Stratocaster guitar and has been active since 1993.</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Darius_Sema%C3%B1a" target="_blank">Wikipedia</a>.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://alchetron.com/cdn/dindin-moreno-5b03a394-b236-409e-b8a8-e778fe0f066-resize-750.jpeg" onerror="this.onerror=null;this.src='Dindin Moreno.jpeg'" class="member-photo" alt="Dindin Moreno">
+                    <h3>Dindin Moreno</h3>
+                    <p>Ferdinand "Dindin" Alvarez Moreno is the drummer for Parokya ni Edgar. He has contributed to many of the band's albums since 1993.</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Dindin_Moreno" target="_blank">Wikipedia</a>.</p>
+                </div>
+                <div class="member-card">
+                    <img src="https://alchetron.com/cdn/vinci-montaner-28120ce9-9af4-4362-919a-6a0d97b14fe-resize-750.jpeg" onerror="this.onerror=null;this.src='Vinci Montaner.jpeg'" class="member-photo" alt="Vinci Montaner">
+                    <h3>Vinci Montaner</h3>
+                    <p>Vinci Montaner is a Filipino singer best known as a backup vocalist and founding member of the band Parokya ni Edgar. He is known for his humorous contributions to the band.</p>
+                    <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Vinci_Montaner" target="_blank">Wikipedia</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div id="Contact" class="Contacts fade-in">
+        <h1>Media & Contacts</h1>
+        <p class="contact-description">Stay connected with Parokya ni Edgar through our official social media channels and contact information.</p>
+
+        <!-- Social Media Section -->
+        <div class="social-media-section">
+            <h2>Social Media</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ParokyaNiEdgarPH" target="_blank" title="Facebook">
+                    <img src="https://freepnglogo.com/images/all_img/facebook-circle-logo-png.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/parokyaniedgar/?hl=en" target="_blank" title="Instagram">
+                    <img src="https://freepnglogo.com/images/all_img/1715965947instagram-logo-png%20(1).png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://x.com/parokyaniedgar" target="_blank" title="Twitter/X">
+                    <img src="https://freepnglogo.com/images/all_img/1729449055_twitter-logo-square%20shape-png.png" alt="Twitter/X" class="social-icon">
+                </a>
+                <a href="https://www.youtube.com/channel/UCMQd4DbAa5ITi0yTmnpbYrw" target="_blank" title="YouTube">
+                    <img src="https://freepnglogo.com/images/all_img/1701508739youtube-png.png" alt="YouTube" class="social-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- Members Contacts Section -->
+        <div class="members-contacts">
+            <h2>Members Contacts</h2>
+            <table class="contact-table">
+                <thead>
+                    <tr>
+                        <th>Chito Miranda</th>
+                        <th>Gab Chee Kee</th>
+                        <th>Buwi Meneses</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Facebook: <a href="https://www.facebook.com/ChitoMirandaJr" target="_blank">Chito Miranda Jr</a></td>
+                        <td>Facebook: <a href="https://www.facebook.com/gabcheekee" target="_blank">Gab Chee Kee</a></td>
+                        <td>Facebook: <a href="https://www.facebook.com/buwi.meneses.275799" target="_blank">Buwi Meneses</a></td>
+                    </tr>
+                    <tr>
+                        <td>Instagram: <a href="https://www.instagram.com/chitomirandajr/" target="_blank">@chitomirandajr</a></td>
+                        <td>Instagram: <a href="https://www.instagram.com/gabnomods/" target="_blank">@gabnomods</a></td>
+                        <td>Instagram: <a href="https://www.instagram.com/b_u_w_i/" target="_blank">@b_u_w_i</a></td>
+                    </tr>
+                    <tr>
+                        <td>Twitter/X: <a href="https://x.com/chitomirandajr" target="_blank">Chito Miranda Jr</a></td>
+                        <td>Twitter/X: N/A</td>
+                        <td>Twitter/X: N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="contact-table">
+                <thead>
+                    <tr>
+                        <th>Darius Semaña</th>
+                        <th>Dindin Moreno</th>
+                        <th>Vinci Montaner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Facebook: <a href="https://www.facebook.com/darius.semana" target="_blank">Darius Semaña</a></td>
+                        <td>Facebook: <a href="https://www.facebook.com/dindinmoreno" target="_blank">Dindin Moreno</a></td>
+                        <td>Facebook: <a href="https://www.facebook.com/fvincent.montaner" target="_blank">Vinci Montaner</a></td>
+                    </tr>
+                    <tr>
+                        <td>Instagram: <a href="https://www.instagram.com/daruislekoy/" target="_blank">@daruislekoy</a></td>
+                        <td>Instagram: <a href="https://www.instagram.com/littledramaboy/" target="_blank">@littledramaboy</a></td>
+                        <td>Instagram: <a href="https://www.instagram.com/vincersm/" target="_blank">@vincersm</a></td>
+                    </tr>
+                    <tr>
+                        <td>Twitter/X: <a href="https://x.com/daruislekoy" target="_blank">Darius Semaña</a></td>
+                        <td>Twitter/X: <a href="https://x.com/dindinmoreno" target="_blank">Dindin Moreno</a></td>
+                        <td>Twitter/X: N/A</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer>
+        <nav class="copyright">
+            <p>
+                &copy; 2025 Parokya ni Edgar Website. All Rights Reserved.
+            </p>
+        </nav>
+        <div class="edgarlink">
+            <p><a href="https://www.facebook.com/ParokyaNiEdgarPH" target="_blank">
+                 Facebook 
+            </a></p>
+            <p><a href="https://www.instagram.com/parokyaniedgar/?hl=en" target="_blank"> 
+                 Instagram 
+            </a></p>
+            <p><a href="https://www.youtube.com/channel/UCMQd4DbAa5ITi0yTmnpbYrw" target="_blank">
+                 YouTube 
+            </a></p>
+            <p><a href="https://x.com/parokyaniedgar" target="_blank">
+                 Twitter/X 
+            </a></p>
+            <p><a href="#Contact">
+                 Contact Us
+            </a></p>
+        </div>
+    </footer>
+        
+ 
+      <script>
+          document.querySelectorAll('.album').forEach(img => {
+  		const audioId = img.getAttribute('data-audio');
+  		const audio = document.getElementById(audioId);
+
+ 		 img.addEventListener('mouseenter', () => {
+   			 audio.currentTime = 0;  // Start from beginning
+   			 audio.play();
+		  });
+
+ 		 img.addEventListener('mouseleave', () => {
+  			  audio.pause();
+  			  audio.currentTime = 0;  // Reset to start
+  		});
+	});
+
+    // Function to handle fade-in effect
+    const fadeInElements = document.querySelectorAll('.fade-in');
+
+    const handleScroll = () => {
+        fadeInElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                element.classList.add('visible'); // Add 'visible' class when in view
+            } else {
+                element.classList.remove('visible'); // Remove 'visible' class when out of view
+            }
+        });
+    };
+
+    // Attach scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Trigger the effect on page load
+    handleScroll();
+
+    let currentIndex = 0;
+
+    function moveSlider(direction) {
+        const slider = document.querySelector('.slider');
+        const items = document.querySelectorAll('.album-item');
+        const totalItems = items.length;
+        const visibleItems = 3; // Number of items visible at a time
+
+        // Calculate the new index
+        currentIndex += direction;
+        if (currentIndex < 0) {
+            currentIndex = totalItems - visibleItems;
+        } else if (currentIndex > totalItems - visibleItems) {
+            currentIndex = 0;
+        }
+
+        // Move the slider
+        const itemWidth = items[0].clientWidth + 20; // Include gap
+        slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+    </script>
+</body>
+</html>
